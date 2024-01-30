@@ -24,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header restaurantInfo={menuData.restaurant} />
+      <h2>Menu</h2>
       <MenuList menu={menuData.menu} onSelectItem={handleSelectItem} />
       <SelectedItems items={selectedItems} totalCost={calculateTotal()} />
     </div>

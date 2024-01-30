@@ -1,14 +1,19 @@
 import React from 'react';
 
-function MenuItem({ item, onSelectItem }) {
+function MenuItem({ item, onSelectItem, type }) {
     return (
-      <div onClick={() => onSelectItem(item)}>
-        <h4>{item.name}</h4>
-        <p>${item.price}</p>
-        {/* Add radio button or other selection mechanism */}
+      <div>
+        <label htmlFor={`${type}-${item.name}`}>
+          <h4>{item.name} - ${item.price}</h4>
+        </label>
+        <input 
+          type="radio" 
+          name={type} 
+          id={`${type}-${item.name}`} 
+          onChange={() => onSelectItem(item)}
+        />
       </div>
     );
-  }
-  
-  export default MenuItem;
-  
+}
+
+export default MenuItem;
