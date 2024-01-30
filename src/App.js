@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import menuData from './data/menu.json';
 import Header from './components/Header/Header';
 import MenuList from './components/MenuList/MenuList';
@@ -27,8 +28,10 @@ function App() {
   return (
     <div className="App">
       <Header restaurantInfo={menuData.restaurant} />
-      <h2>Menu</h2>
-      <MenuList menu={menuData.menu} onSelectItem={handleSelectItem} />
+      <div className="Menu">
+        <h2>Menu</h2>
+        <MenuList menu={menuData.menu} onSelectItem={handleSelectItem} />
+      </div>
       <SelectedItems items={Object.values(selectedItems)} totalCost={calculateTotal()} />
     </div>
   );

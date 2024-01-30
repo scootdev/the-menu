@@ -1,0 +1,13 @@
+.selected-items {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px; /* Adjust the width as needed */
+    padding: 20px;
+    background-color: white; /* Or any color that fits your design */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+    z-index: 10; /* Ensures it's above other content */
+    max-height: 100vh; /* Optional: Limits the height to the viewport */
+    overflow-y: auto; /* Optional: Adds scroll for overflow content */
+  }
+  

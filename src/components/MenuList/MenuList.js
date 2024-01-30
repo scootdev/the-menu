@@ -1,4 +1,5 @@
 import React from 'react';
+import './MenuList.css';
 import MenuType from '../MenuType/MenuType';
 
 function MenuList({ menu, onSelectItem }) {
@@ -10,7 +11,7 @@ function MenuList({ menu, onSelectItem }) {
     }, {});
   
     return (
-      <div>
+      <div class='menu-list'>
         {Object.keys(menuTypes).map((type) => (
           <MenuType key={type} type={type} items={menuTypes[type]} onSelectItem={onSelectItem} />
         ))}

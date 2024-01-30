@@ -2,7 +2,7 @@ import React from 'react';
 
 function MenuItem({ item, onSelectItem, type }) {
     return (
-      <div>
+      <div className="menu-item">
         <label htmlFor={`${type}-${item.name}`}>
           <h4>{item.name} - ${item.price}</h4>
         </label>
@@ -15,5 +15,6 @@ function MenuItem({ item, onSelectItem, type }) {
       </div>
     );
 }
+
 
 export default MenuItem;
