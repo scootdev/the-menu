@@ -6,12 +6,14 @@
   padding: 20px;
   max-width: 800px; /* Adjust the width as needed */
   margin: auto;
-  background-color: #fff; /* Optional: Adds a background color */
+  background-color: #DCE6CA; /* Optional: Adds a background color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
   border-radius: 10px; /* Optional: Rounds the corners */
   text-align: center;
 }
 
 .Menu h2 {
+  font-size: 2.5em;
   color: rgb(209, 50, 50);
+  margin-bottom: 5px;
 }

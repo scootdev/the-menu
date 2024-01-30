@@ -1,11 +1,13 @@
 import React from 'react';
+import './MenuItem.css';
 
 function MenuItem({ item, onSelectItem, type }) {
     return (
       <div className="menu-item">
-        <label htmlFor={`${type}-${item.name}`}>
-          <h4>{item.name} - ${item.price}</h4>
-        </label>
+        <div className="item-details">
+          <h4>{item.name}</h4>
+          <p>${item.price.toFixed(2)}</p>
+        </div>
         <input 
           type="radio" 
           name={type} 
@@ -15,6 +17,5 @@ function MenuItem({ item, onSelectItem, type }) {
       </div>
     );
 }
-
 
 export default MenuItem;
