@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import menuData from './data/menu.json';
+import Header from './components/Header/Header';
+import MenuList from './components/MenuList/MenuList';
+import SelectedItems from './components/SelectedItems/SelectedItems';
 
 function App() {
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  // Function to handle item selection
+  const handleSelectItem = (item) => {
+    // Logic to add/remove item from selectedItems
+  };
+
+  // Calculate total cost
+  const calculateTotal = () => {
+    // Logic to calculate total cost of selectedItems
+  };
+
+  useEffect(() => {
+    // Any initial setup if needed
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header restaurantInfo={menuData.restaurant} />
+      <MenuList menu={menuData.menu} onSelectItem={handleSelectItem} />
+      <SelectedItems items={selectedItems} totalCost={calculateTotal()} />
     </div>
   );
 }
