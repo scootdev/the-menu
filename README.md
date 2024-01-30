@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Restaurant Menu Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a web-based application designed to dynamically render a restaurant's menu and allow users to select items from different categories. The application displays the restaurant's details, lists menu items by category, and shows the user's selections along with the total cost.
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- **Dynamic Menu Rendering:** The menu is generated dynamically from a JSON file, allowing for easy updates and maintenance.
+- **Item Selection:** Users can select one item from each menu category, with the application tracking their selections.
+- **Cost Calculation:** The application calculates and displays the total cost of the selected items.
+- **Responsive Layout:** While primarily designed for desktop, basic responsive design principles are applied for better mobile viewing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies and Frameworks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** Chosen for its component-based architecture, which allows for efficient and organized code structure.
+- **CSS Flexbox and Grid:** Utilized for layout design, providing a flexible and responsive interface.
+- **JavaScript ES6:** Modern JavaScript features are used for concise and more readable code.
 
-### `npm test`
+## Design and Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Component Structure:** The application is broken down into several key components (`Header`, `MenuList`, `MenuType`, `MenuItem`, `SelectedItems`), each responsible for a specific part of the application.
+- **State Management:** React's useState hook is used for managing the state of selected items and total cost.
+- **Flexbox and Grid:** Flexbox is used for aligning menu items and ensuring a fluid layout, while CSS Grid offers a structured layout for menu items within each category.
 
-### `npm run build`
+## Future Enhancements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Given more time, the following enhancements would be considered:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Mobile-Friendly Layout:** Implementing a more advanced responsive design, particularly fixing the order overlay to the top of the screen on mobile devices for better accessibility and user experience.
+- **Interactive Features:** Adding more interactive elements such as animations or transitions for a more engaging user interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup and Installation
 
-### `npm run eject`
+1. Clone the repository.
+2. Navigate to the project directory and install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Open `http://localhost:3000` to view the application in the browser.
