@@ -9,12 +9,15 @@ function App() {
 
   // Function to handle item selection
   const handleSelectItem = (item) => {
-    // Logic to add/remove item from selectedItems
+    setSelectedItems(prevSelectedItems => ({
+      ...prevSelectedItems,
+      [item.type]: item
+    }));
   };
 
   // Calculate total cost
   const calculateTotal = () => {
-    // Logic to calculate total cost of selectedItems
+    return Object.values(selectedItems).reduce((total, item) => total + item.price, 0);
   };
 
   useEffect(() => {
@@ -26,7 +29,7 @@ function App() {
       <Header restaurantInfo={menuData.restaurant} />
       <h2>Menu</h2>
       <MenuList menu={menuData.menu} onSelectItem={handleSelectItem} />
-      <SelectedItems items={selectedItems} totalCost={calculateTotal()} />
+      <SelectedItems items={Object.values(selectedItems)} totalCost={calculateTotal()} />
     </div>
   );
 }
